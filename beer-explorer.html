@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/icon" href="images/favicon.ico">
+        <title>Beer Explorer | Find A New Beer To Drink</title>
+
+        <link href="beer-explorer/stylesheet.css" rel="stylesheet">
+        <link href="beer-explorer/animate.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    </head>
+<body>
+
+	<header>
+		<div class="full-height-container">
+			<div class="container">
+		    	<div class="row spacer-30 text-center">
+		    		<div class="logo"></div>
+		    		<div id="start-container" class="spacer-20">
+		    			<div class="svg-container">
+		    				<svg id="compass" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 124 124" enable-background="new 0 0 124 124" xml:space="preserve">
+								<path class="compass-outer" d="M124.1,62.1c0,34.3-27.8,62-62,61.9C27.7,124,0,96.3,0.1,62c0.1-34.3,27.8-62,62-61.9C96.4,0.2,124.1,27.9,124.1,62.1z
+									 M14.9,67.5c2.6,24.8,24.1,40.6,41.7,41.6c-1.5-3.5-1-6.4,1.4-8.3c2.2-1.8,5.3-1.9,7.7-0.3c2.7,1.9,3.2,4.5,1.9,8.8
+									c21.6-1.9,39.8-20.6,41.6-41.6c-4,1.4-6.6,0.9-8.5-1.6c-1.7-2.1-1.8-5.2-0.3-7.5c1-1.4,2.3-2.5,4-2.6c1.6-0.1,3.2,0.2,4.8,0.4
+									c-2.3-23-22.5-39.9-41.6-41.2c1.5,3.7,0.9,6.6-1.6,8.5c-2.2,1.7-5.3,1.7-7.6,0.1c-2.6-1.9-3.2-4.6-1.8-8.7
+									C34.9,16.9,16.7,35.7,15,56.6c4-1.4,6.8-0.9,8.7,1.8c1.6,2.3,1.6,5.4-0.1,7.6C21.6,68.5,18.9,69,14.9,67.5z"/>
+								<path class="compass-inner" d="M36.7,87.5c0.3-0.6,0.4-0.9,0.6-1.2c5.5-10.4,11-20.7,16.6-31.1c0.3-0.5,0.8-1.1,1.3-1.4c10.4-5.6,20.8-11.1,31.2-16.6
+									c0.3-0.2,0.6-0.3,1.2-0.5c-0.3,0.6-0.4,1-0.6,1.3c-5.5,10.3-11,20.7-16.5,31c-0.3,0.5-0.8,1.1-1.3,1.4
+									c-10.4,5.6-20.8,11.1-31.2,16.6C37.5,87.1,37.2,87.2,36.7,87.5z M68.2,62.1c0-3.3-2.8-6.1-6.1-6.1c-3.3,0-6.1,2.8-6.2,6.1
+									c0,3.3,2.9,6.2,6.2,6.2C65.5,68.2,68.2,65.4,68.2,62.1z"/>
+							</svg>
+		    			</div>
+		    			<div class="animated pulse">
+							<h2 class="display bebasregular">Start</h2>
+						</div>
+					</div>
+			    </div>
+			</div>
+		</div>
+	</header>
+
+	<section id="userInput">
+		<!-- form starts here -->
+		<form method="GET" name="" id="submitForm">
+			<!-- form select type of beer -->
+			<fieldset id="beerChoice" class="background-type full-height-container">
+			    <div class="container">
+			    	<div class="row spacer-40">
+				    	<h1 class="display text-center bebasregular text-white animated pulse">Select a type of beer:</h1>
+				    </div>
+				    <div class="row">
+				    	<div class="col-md-8 col-md-offset-2">
+				    		<div class="row spacer-30">
+						    	<div class="col-md-3 col-sm-3 col-xs-6 spacer-20">
+						    		<div class="popover-container" data-toggle="popover" data-placement="bottom" title="" data-content="Ale is brewed from malted barley using a warm fermentation with a strain of brewers' yeast. Compared to lager yeasts, ale yeast ferments more quickly, and often produces a sweeter, fuller-bodied and fruitier taste. Most ales contain hops, which help preserve the beer and impart a bitter herbal flavour that balances the sweetness of the malt.">
+							    		<input type="radio" name="beer-type" value="type-ale" id="type-ale"/>
+										<label for="type-ale" class="beer-type">
+							    			<!-- <img src="images/beer-ale-2.svg"> -->
+							    			<div class="bottle-container">
+								    			<svg class="bottle-type" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 22.1 83.1" enable-background="new 0 0 22.1 83.1" xml:space="preserve">
+													<g>
+														<path class="bottle" fill="#FCB918" d="M22.1,55.9c0-5.3,0-10.6-0.1-15.9c-0.1-3.9-1.1-8.2-4.4-10.7c-1.2-0.9-1.4-2.8-1.4-3.2
+															c-0.6-4.8-1.2-14.3-1.4-17.4l0.7-0.9C15.4,6.6,15.1,4,15,3.1c0-0.2-0.7-0.5-0.7-0.5c-0.6-0.1,0.9-0.2,0.9-0.7
+															c0-0.7-0.3-1.2-1.9-1.4c-1-0.2-2.1-0.1-2.1-0.1c-3.5,0-4.1,0.4-4.3,1.4c0,0.6,1,0.5,0.9,0.9c0.1,0-0.8,0.4-0.8,0.5
+															c0,1.2-0.4,2.9-0.7,4.7l0.6,0.9C6.7,15,6.3,19.8,5.9,26.1c-0.1,1.2-0.3,2.3-1.2,3.2c-3.1,3-4.4,6.6-4.5,10.8
+															c-0.1,5.4-0.1,30.1-0.1,36.7c0,3.9,1.8,4.9,4.5,5.6c2.2,0.4,4.6,0.4,6.9,0.4c1.8,0,3.8-0.1,5.6-0.3c3.8-0.6,5.1-2.1,5.1-5.7
+															C22.1,69.9,22.1,62.9,22.1,55.9z"/>
+														<path fill="#F9CC67" d="M8.6,10c0,0-0.4,14.6-1,17.4c-0.6,2.7-2.2,3.7-3,5.1c-0.7,1.4-2.1,2.8-2.1,9c0,6.2,0,32.8,0,32.8V77
+															c0,0,0.2,0.9,0.6,1.4c0.4,0.4,1.6,0.9,1.6,0.9V42.9c0,0-0.3-5.6,1.9-9.4c1.7-2.9,2.4-3.6,2.4-7.8c0-5,0.2-15,0.2-15L8.6,10z"/>
+													</g>
+												</svg>
+											</div>
+								    		<p class="beer-type-text bebasregular">Ale</p>
+							    		</label>
+							    	</div>
+						    	</div>
+						    	<div class="col-md-3 col-sm-3 col-xs-6 spacer-20">
+						    		<div class="popover-container" data-toggle="popover" data-placement="bottom" title="" data-content="Lagers are fermented and conditioned at low temperatures. It may be pale, golden, amber, or dark. Pale lager is the most widely consumed and commercially available style of beer in the world. Pilsner, Bock, Märzen, and Vienna, are all styles of lager. Dark lagers include Dunkel and Schwarzbier.">
+							    		<input type="radio" name="beer-type" value="type-lager" id="type-lager"/>
+										<label for="type-lager" class="beer-type">
+							    			<!-- <img src="images/beer-lager.svg"> -->
+							    			<div class="bottle-container">
+								    			<svg class="bottle-type" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 22.1 83.1" enable-background="new 0 0 22.1 83.1" xml:space="preserve">
+													<g>
+														<path class="bottle" fill="#FCB918" d="M21.2,44.4c-0.7-4.8-1.9-9.3-3.4-14c-2.7-7.9-2.6-20.5-2.7-23.5c0-1.3,0.1-2.7,0.4-4c0-0.1-0.6-0.3-0.6-0.4
+															c-0.1-0.3,0.7-0.2,0.7-0.9c0-0.5-0.4-0.9-1.2-1.2C14,0.3,12.4,0,10.8,0C9.5,0,8.2,0.2,7.8,0.4C6.8,0.6,6.5,1,6.4,1.6
+															C6.3,2.2,7.1,2.1,7.1,2.5c0,0.1-0.7,0.3-0.6,0.4c0.2,1.3,0.4,2.7,0.4,4C6.6,11,6.3,14.8,6,18.7c-0.3,4.8-0.9,9.4-2.6,14.1
+															c-1.2,3.7-2.2,7.8-2.7,11.7c-0.6,6.1-0.6,29.9-0.6,32.7c0,2.3,1.1,3.6,4.9,4.9c2,0.5,3.9,0.7,5.9,0.7c2.1,0,4.1,0,6.4-0.7
+															c3.7-1,4.7-2.9,4.7-4.8C22.1,70.7,21.9,48.3,21.2,44.4z"/>
+														<path fill="#F9CC67" d="M8.4,5.6c0,0-0.1,18.3-1.1,23.1s-3.1,9.1-3.1,14.5s0,33,0,33s0,1.3,0.7,2c0.6,0.5,1.5,0.9,1.5,0.9l0-31.4
+															c0,0-0.2-6.3,0.9-10.9s1.8-5.3,1.8-11.7s0-18.9,0-18.9L8.4,5.6z"/>
+													</g>
+												</svg>
+											</div>
+								    		<p class="beer-type-text bebasregular">Lager</p>
+								    	</label>
+								    </div>
+						    	</div>
+						    	<div class="col-md-3 col-sm-3 col-xs-6 spacer-20">
+						    		<div class="popover-container" data-toggle="popover" data-placement="bottom" title="" data-content="Porter is a dark style of beer developed in London from well-hopped beers made from brown malt. The history and development of stout and porter are intertwined. The name 'stout' as used for a dark beer is believed to have come about because strong porters were marketed under such names as 'Extra Porter', 'Double Porter', and 'Stout Porter'">
+							    		<input type="radio" name="beer-type" value="type-stoutporter" id="type-stoutporter"/>
+										<label for="type-stoutporter" class="beer-type">
+							    			<!-- <img src="images/beer-stoutporter.svg"> -->
+							    			<div class="bottle-container">
+								    			<svg class="bottle-type" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 23.5 83.1" enable-background="new 0 0 23.5 83.1" xml:space="preserve">
+													<g>
+														<path class="bottle" fill="#FCB918" d="M22.8,42.5c0-1.6-0.2-3.3-0.4-4.9c-0.4-3.3-1.8-6-4.2-8.1c-1-1-1.6-2-1.2-3.6c0.3-1.5,0.4-3.2,0.3-4.8
+															c-0.3-2.9-0.8-6-1.2-9c0-0.3-0.7-3.9-0.8-5.4c-0.1-1.4,0-2.7,0-4.1c0,0-0.5-0.1-0.6-0.3c0-0.1,0.9-0.1,0.9-0.9
+															c0-0.6-0.3-1.1-1.4-1.3C13.5,0.1,12.5,0,11.6,0c0,0-1.8,0-3.1,0.2C7.8,0.4,7.4,0.8,7.4,1.4c0,0.8,0.9,0.9,0.9,1
+															c0,0.3-0.6,0.2-0.6,0.3c0.1,1.6,0.1,3.1,0,3.9c0,0.2,0,0.3,0,0.4c-0.2,1.7-0.5,3.6-0.8,5.3c-0.5,2.9-1.1,6-1.2,9
+															c-0.1,1.5-0.1,2.8,0.2,4.7c0.1,0.8,0.4,2-0.7,3.2c-0.2,0.2-0.3,0.3-0.5,0.5c-2.3,2.3-3.7,5.2-4.2,8.2C0.2,39,0,41.3,0,42.6
+															C0,48.4,0,53,0,58.8l0,0c0,4.8,0,9.6,0,14.2c0,1.7-0.1,3.5,0.1,5.1c0.2,2.4,1.8,3.7,4.4,4.2c2.3,0.3,4.8,0.3,7.2,0.3
+															c2,0,4.3-0.1,6.2-0.4c3.2-0.5,4.9-1.8,4.9-5.1C22.8,65.7,22.8,54.1,22.8,42.5z"/>
+														<path fill="#F9CC67" d="M9.2,5.5c0,0-0.1,4.8-0.8,8.3s-0.9,13.3,0,15.3s-1,2.1-2.2,4.3S3.7,40,3.7,45.5s0,29.1,0,29.1
+															s0,1.5,0.8,2.7s1.7,1.3,1.7,1.3V50.4v-5.6c0,0-0.4-3.2,0.8-7.9s3.4-4.1,3.2-7c-0.2-2.9-1.7-7.5-0.6-17.1S9.2,5.5,9.2,5.5z"/>
+													</g>
+												</svg>
+											</div>
+								    		<p class="beer-type-text bebasregular">Stout &amp; Porter</p>
+								    	</label>
+								    </div>
+						    	</div>
+						    	<div class="col-md-3 col-sm-3 col-xs-6 spacer-20">
+						    		<div class="popover-container" data-toggle="popover" data-placement="bottom" title="" data-content="Choose from a list of alternative beer options: Malt, Cider, Gluten-Free, Low-Alcohol">
+							    		<input type="radio" name="beer-type" value="type-alternative" id="type-alternative"/>
+										<label for="type-alternative" class="beer-type">
+							    			<!-- <img src="images/beer-malt.svg"> -->
+							    			<div class="bottle-container">
+								    			<svg class="bottle-type alt" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 74.8" enable-background="new 0 0 24 74.8" xml:space="preserve">
+													<g>
+														<path class="bottle" fill="#FCB918" d="M23.9,44.4c0-5.8-1.4-11.3-4.6-16.3c-0.6-1.1-1.2-2.3-1.3-3.6c-0.5-3.9-1.1-7.9-1.4-11.8
+															c-0.3-3.3-0.3-6.5-0.4-9.8c0,0-0.8,0.2-0.4-0.4c0.2-0.2,0.6-0.4,0.6-0.4c0.5-0.8,0.2-1.6-0.7-1.8C15,0.2,13.4,0,11.8,0
+															C10.3,0,8.8,0.2,8,0.4C7.1,0.8,7.1,1.6,7.5,2.2c0,0,0.4,0.1,0.6,0.3C8.5,3,7.7,3,7.7,3s-0.2,7.7-0.4,9.8c-0.2,2.6-1,10.5-1.3,11.9
+															c-0.3,1.3-0.6,2.6-1.4,3.6C1,34,0.2,39.3,0.2,44.2C0,51.8-0.1,64.1,0,68c0,0.7,0,1.2,0,1.3C0.5,72,2.3,73.5,4.6,74
+															c2.3,0.4,5,0.4,7.4,0.4c2.2,0,4.5,0,6.8-0.4c3.2-0.6,5.1-2,5.1-5.8C23.9,60.4,23.9,52.2,23.9,44.4z"/>
+														<path fill="#F9CC67" d="M9.3,6c0,0-0.3,12.4-0.5,15.7C8.6,25.1,9,28.3,6.2,33C3.1,38.3,4,52.9,4,57.4s0,11.1,0,11.1
+															s0.4,1.1,1.1,1.6c0.4,0.3,1.6,0.8,1.6,0.8v-23c0,0-0.1-6.6,0.9-10.6c0.6-2.4,2.6-5.8,2.6-12.2c0-5.9,0-12,0-12l-0.1-6.6L9.3,6z"/>
+													</g>
+												</svg>
+											</div>
+								    		<p class="beer-type-text bebasregular">Alternative<br> Beers</p>
+							    		</label>
+							    	</div>
+						    	</div>
+						    </div>
+					    </div>
+				    </div>
+			    </div>
+			</fieldset>
+			<!-- form select type of beer END -->
+
+			<!-- form select style - ALE -->
+			<fieldset id="styleAle" class="beer-list full-height-container background-style" data-name="type-ale">
+			    <div class="container">
+			    	<div class="row spacer-40">
+			    		<div class="arrowPrevious">
+							<i class="fa fa-chevron-up"></i>
+							<div class="previous">Back</div>
+						</div>
+						<p class="warning spacer-20"></p>
+				    	<h1 class="display text-center bebasregular">Choose a style of ale:</h1>
+				    </div>
+				    <div class="row">
+				    	<div class="col-md-8 col-md-offset-2">
+				    		<div class="row">
+						    	<div class="col-md-3 col-sm-3 col-xs-6 spacer-20">
+						    		<input type="radio" name="beer-style" value="barley wine" id="barley wine" />
+									<label class="style-list" for="barley wine">
+							    		<h4 class="bebasregular">Barley Wine</h4>
+							    	</label>
+						    	</div>
+						    	<div class="col-md-3 col-sm-3 col-xs-6 spacer-20">
+						    		<input type="radio" name="beer-style" value="belgian ale" id="belgian ale" />
+									<label class="style-list" for="belgian ale">
+							    		<h4 class="bebasregular">Belgian Ale</h4>
+							    	</label>
+						    	</div>
+						    	<div class="col-md-3 col-sm-3 col-xs-6 spacer-20">
+						    		<input type="radio" name="beer-style" value="brown ale" id="brown ale" />
+									<label class="style-list" for="brown ale">
+							    		<h4 class="bebasregular">Brown Ale</h4>
+							    	</label>
+						    	</div>
+						    	<div class="col-md-3 col-sm-3 col-xs-6 spacer-20">
+						    		<input type="radio" name="beer-style" value="dark ale" id="dark ale"/>
+									<label class="style-list" for="dark ale">
+							    		<h4 class="bebasregular">Dark Ale</h4>
+						    		</label>
+						    	</div>
+						    	<div class="col-md-3 col-sm-3 col-xs-6 spacer-20">
+						    		<input type="radio" name="beer-style" value="kolsch" id="kolsch" />
+									<label class="style-list" for="kolsch">
+							    		<h4 class="bebasregular">Kolsch</h4>
+						    		</label>
+						    	</div>
+						    	<div class="col-md-3 col-sm-3 col-xs-6 spacer-20">
+						    		<input type="radio" name="beer-style" value="pale ale" id="pale ale" />
+									<label class="style-list" for="pale ale">
+							    		<h4 class="bebasregular">Pale Ale</h4>
+						    		</label>
+						    	</div>
+						    	<div class="col-md-3 col-sm-3 col-xs-6 spacer-20">
+						    		<input type="radio" name="beer-style" value="wheat beer" id="wheat beer"/>
+									<label class="style-list" for="wheat beer">
+							    		<h4 class="bebasregular">Wheat Beer</h4>
+						    		</label>
+						    	</div>
+						    	<div class="col-md-3 col-sm-3 col-xs-6 spacer-20">
+						    		<input type="radio" name="beer-style" value="old ale" id="old ale" />
+									<label class="style-list" for="old ale">
+							    		<h4 class="bebasregular">Old Ale</h4>
+						    		</label>
+						    	</div>
+						    </div>
+					    </div>
+				    </div>
+				    <div class="row">
+					    <div class="search-container"></div>
+					</div>
+			    </div>
+			</fieldset>
+			<!-- form select style - ALE END-->
+
+			<!-- form select style - LAGER -->
+			<fieldset id="styleLager" class="beer-list full-height-container background-style" data-name="type-lager">
+			    <div class="container">
+			    	<div class="row spacer-40">
+			    		<div class="arrowPrevious">
+							<i class="fa fa-chevron-up"></i>
+							<div class="previous">Back</div>
+						</div>
+						<p class="warning spacer-20"></p>
+				    	<h1 class="display text-center bebasregular">Choose a style of lager:</h1>
+				    </div>
+				    <div class="row">
+				    	<div class="col-md-8 col-md-offset-2">
+				    		<div class="row">
+						    	<div class="col-md-3 col-sm-3 col-xs-6 spacer-20">
+						    		<input type="radio" name="beer-style" value="bock" id="bock" />
+									<label class="style-list" for="bock">
+							    		<h4 class="bebasregular">Bock</h4>
+							    	</label>
+						    	</div>
+						    	<div class="col-md-3 col-sm-3 col-xs-6 spacer-20">
+						    		<input type="radio" name="beer-style" value="dunkel" id="dunkel" />
+									<label class="style-list" for="dunkel">
+							    		<h4 class="bebasregular">Dunkel</h4>
+							    	</label>
+						    	</div>
+						    	<div class="col-md-3 col-sm-3 col-xs-6 spacer-20">
+						    		<input type="radio" name="beer-style" value="marzen" id="marzen" />
+									<label class="style-list" for="marzen">
+							    		<h4 class="bebasregular">Marzen</h4>
+							    	</label>
+						    	</div>
+						    	<div class="col-md-3 col-sm-3 col-xs-6 spacer-20">
+						    		<input type="radio" name="beer-style" value="pale lager" id="pale lager" />
+									<label class="style-list" for="pale lager">
+							    		<h4 class="bebasregular">Pale Lager</h4>
+						    		</label>
+						    	</div>
+						    	<div class="col-md-3 col-sm-3 col-xs-6 spacer-20">
+						    		<input type="radio" name="beer-style" value="schwarzbie" id="schwarzbie" />
+									<label class="style-list" for="schwarzbie">
+							    		<h4 class="bebasregular">Schwarzbie</h4>
+						    		</label>
+						    	</div>
+						    	<div class="col-md-3 col-sm-3 col-xs-6 spacer-20">
+						    		<input type="radio" name="beer-style" value="vienna" id="vienna" />
+									<label class="style-list" for="vienna">
+							    		<h4 class="bebasregular">Vienna</h4>
+						    		</label>
+						    	</div>
+						    	<div class="col-md-3 col-sm-3 col-xs-6 spacer-20">
+						    		<input type="radio" name="beer-style" value="kellerbier" id="kellerbier" />
+									<label class="style-list" for="kellerbier">
+							    		<h4 class="bebasregular">Kellerbier</h4>
+						    		</label>
+						    	</div>
+						    </div>
+					    </div>
+				    </div>
+				    <div class="row">
+					    <div class="search-container"></div>
+					</div>
+			    </div>
+			</fieldset>
+			<!-- form select style - LAGER END-->
+
+			<!-- form select style - STOUT PORTER -->
+			<fieldset id="styleStoutPorter" class="beer-list full-height-container background-style" data-name="type-stoutporter">
+			    <div class="container">
+			    	<div class="row spacer-40">
+			    		<div class="arrowPrevious">
+							<i class="fa fa-chevron-up"></i>
+							<div class="previous">Back</div>
+						</div>
+						<p class="warning spacer-20"></p>
+				    	<h1 class="display text-center bebasregular">Choose a style of stout or porter:</h1>
+				    </div>
+				    <div class="row">
+				    	<div class="col-md-8 col-md-offset-2">
+				    		<div class="row">
+						    	<div class="col-md-3 col-sm-3 col-xs-6 spacer-20">
+						    		<input type="radio" name="beer-style" value="porter" id="porter" />
+									<label class="style-list" for="porter">
+							    		<h4 class="bebasregular">Porter</h4>
+							    	</label>
+						    	</div>
+						    	<div class="col-md-3 col-sm-3 col-xs-6 spacer-20">
+						    		<input type="radio" name="beer-style" value="baltic porter" id="baltic porter" />
+									<label class="style-list" for="baltic porter">
+							    		<h4 class="bebasregular">Baltic Porter</h4>
+							    	</label>
+						    	</div>
+						    	<div class="col-md-3 col-sm-3 col-xs-6 spacer-20">
+						    		<input type="radio" name="beer-style" value="stout" id="stout" />
+									<label class="style-list" for="stout">
+							    		<h4 class="bebasregular">Stout</h4>
+							    	</label>
+						    	</div>
+						    	<div class="col-md-3 col-sm-3 col-xs-6 spacer-20">
+						    		<input type="radio" name="beer-style" value="imperial stout" id="imperial stout" />
+									<label class="style-list" for="imperial stout">
+							    		<h4 class="bebasregular">Imperial Stout</h4>
+						    		</label>
+						    	</div>
+						    	<div class="col-md-3 col-sm-3 col-xs-6 spacer-20">
+						    		<input type="radio" name="beer-style" value="oatmeal stout" id="oatmeal stout" />
+									<label class="style-list" for="oatmeal stout">
+							    		<h4 class="bebasregular">Oatmeal Stout</h4>
+						    		</label>
+						    	</div>
+						    	<div class="col-md-3 col-sm-3 col-xs-6 spacer-20">
+						    		<input type="radio" name="beer-style" value="sweet stout" id="sweet stout" />
+									<label class="style-list" for="sweet stout">
+							    		<h4 class="bebasregular">Sweet Stout</h4>
+						    		</label>
+						    	</div>
+						    </div>
+					    </div>
+				    </div>
+				    <div class="row">
+					    <div class="search-container"></div>
+					</div>
+			    </div>
+			</fieldset>
+			<!-- form select style - STOUT PORTER END-->
+
+			<!-- form select style - ALTERNATIVE FREE -->
+			<fieldset id="styleAlternative" class="beer-list full-height-container background-style" data-name="type-alternative">
+			    <div class="container">
+			    	<div class="row spacer-40">
+			    		<div class="arrowPrevious">
+							<i class="fa fa-chevron-up"></i>
+							<div class="previous">Back</div>
+						</div>
+						<p class="warning spacer-20"></p>
+				    	<h1 class="display text-center bebasregular">Choose an alternative beer:</h1>
+				    </div>
+				    <div class="row">
+				    	<div class="col-md-8 col-md-offset-2">
+				    		<div class="row">
+				    			<div class="col-md-3 col-sm-3 col-xs-6 spacer-20">
+						    		<input type="radio" name="beer-style" value="malt beer" id="malt beer" />
+									<label class="style-list" for="malt beer">
+							    		<h4 class="bebasregular">Malt</h4>
+							    	</label>
+						    	</div>
+						    	<div class="col-md-3 col-sm-3 col-xs-6 spacer-20">
+						    		<input type="radio" name="beer-style" value="cider" id="cider" />
+									<label class="style-list" for="cider">
+							    		<h4 class="bebasregular">Cider</h4>
+							    	</label>
+						    	</div>
+						    	<div class="col-md-3 col-sm-3 col-xs-6 spacer-20">
+						    		<input type="radio" name="beer-style" value="gluten free" id="gluten free" />
+									<label class="style-list" for="gluten free">
+							    		<h4 class="bebasregular">Gluten-Free</h4>
+							    	</label>
+						    	</div>
+						    	<div class="col-md-3 col-sm-3 col-xs-6 spacer-20">
+						    		<input type="radio" name="beer-style" value="low alcohol" id="low alcohol" />
+									<label class="style-list" for="low alcohol">
+							    		<h4 class="bebasregular">Low-alcohol</h4>
+							    	</label>
+						    	</div>
+						    </div>
+					    </div>
+				    </div>
+				    <div class="row">
+					    <div class="search-container"></div>
+					</div>
+			    </div>
+			</fieldset>
+			<!-- form select style - ALTERNATIVE END-->
+
+			<!-- Submit Form -->
+			<div id="searchButton" class="container">
+		    	<div class="row spacer-40 text-center">
+			    	<input class="hide" type="submit" value="Search" id="button">
+			    </div>
+			</div>
+
+		</form>
+	</section>
+
+	<!-- Search results -->
+	<section id="searchResults" class="container"></section>
+
+
+	<section id="footerContent" class="hide-section">
+		<div class="container">
+			<div id="searchRestart" class="row text-center spacer-40">
+		    	<input type="button" value="Start Over">
+			</div>
+			<div class="row spacer-40 text-center">
+				<div class="col-md-12">
+					<p class="montserrat text-white text-center">© 2015 Denise Kwan. Data courtesy of <a href="https://lcboapi.com/" target="_blank">LCBO API</a> &amp; <a href="http://www.brewerydb.com/" target="_blank">Brewery DB</a></p>
+				</div>
+		    </div>
+		</div>
+	</section>
+
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  	<script src="beer-explorer/beer-explorer.js"></script>
+</body>
+</html>

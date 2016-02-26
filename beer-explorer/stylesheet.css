@@ -1,0 +1,399 @@
+@font-face {
+    font-family: 'bebasregular';
+    src: url('fonts/BEBAS___-webfont.eot');
+    src: url('fonts/BEBAS___-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/BEBAS___-webfont.woff') format('woff'),
+         url('fonts/BEBAS___-webfont.ttf') format('truetype'),
+         url('fonts/BEBAS___-webfont.svg#bebasregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'montserratlight';
+    src: url('fonts/montserrat-light-webfont.eot');
+    src: url('fonts/montserrat-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/montserrat-light-webfont.woff2') format('woff2'),
+         url('fonts/montserrat-light-webfont.woff') format('woff'),
+         url('fonts/montserrat-light-webfont.ttf') format('truetype'),
+         url('fonts/montserrat-light-webfont.svg#montserratlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+a { color: #fff !important; }
+input[type=radio] { display: none; }
+body { }
+html, body { height: 100%; }
+
+form fieldset label {
+	display: inline;
+}
+
+header {
+	background: url('images/background-image.jpg') no-repeat;
+	background-size: cover;
+}
+
+.background-type {
+	background: url('images/background-wood-2.jpg');
+	background-size: cover;
+}
+.background-style {
+	background: url('images/retro_intro.png');
+}
+
+
+/* FONT STYLES */
+.text-white {
+	color: #fff;
+}
+.bebasregular {
+	font-family: 'bebasregular', 'arial', san-serif;
+}
+.montserrat {
+	font-family: 'montserratlight', 'arial', san-serif;
+}
+h1.display {
+	font-size: 40px;
+	line-height: 47px;
+	letter-spacing: 1px;
+}
+@media screen and (max-width: 480px) {
+  	h1.display {
+  		font-size: 30px;
+  		line-height: 35px;
+    }
+}
+
+fieldset#styleAle, fieldset#styleLager, fieldset#styleStoutPorter, fieldset#styleMalt, fieldset#styleAlternative  {
+	display: none;
+}
+fieldset#styleAle.show, fieldset#styleLager.show, fieldset#styleStoutPorter.show, fieldset#styleAlternative.show  {
+	display: inline;
+}
+
+.full-height-container {
+	position: relative;
+	height: 100vh;
+}
+@media screen and (max-width: 480px) {
+  	.full-height-container {
+  		height: auto;
+    }
+}
+
+.body-section {
+	padding: 40px 0;
+}
+.spacer-20 {
+	padding: 20px 0;
+}
+.spacer-30 {
+	padding: 30px 0;
+}
+@media screen and (max-width: 480px) {
+  	.spacer-30 {
+  		padding: 15px;
+    }
+}
+.spacer-40 {
+	padding: 40px 0;
+}
+@media screen and (max-width: 480px) {
+  	.spacer-40 {
+  		padding: 25px;
+    }
+}
+.no-margin {
+	margin: 0;
+}
+
+.beer-type {
+	width: 100%;
+	text-align: center;
+	display: inline-block;
+}
+
+input[type=radio]:checked + label.style-list {
+	background: #fdba12;
+	color: #fff;
+}
+
+/* SVG styles */
+#compass {
+	width: 150px;
+	height: 150px;
+	cursor: pointer;
+}
+@media screen and (max-width: 480px) {
+  	#compass {
+  		width: 110px;
+		height: 110px;
+    }
+}
+.compass-outer {
+	fill: rgb(252, 185, 24);
+}
+.compass-inner {
+	fill: rgb(252, 185, 24);
+    animation-name: spin;
+    animation-duration: 2s;
+    /* Things added */
+    animation-iteration-count: infinite;
+    transform-origin: 50% 50%;
+    display: inline-block;
+    /* <--- */
+}
+@keyframes spin {
+    0% {
+    	-webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+    	-webkit-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		transform: rotate(360deg);
+    }
+}
+
+.spinning-bottle {
+	background: url('images/beer-ale.svg') no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 150px;
+    margin:-60px 0 0 -60px;
+    -webkit-animation:spin 1s linear infinite;
+    -moz-animation:spin 1s linear infinite;
+    animation:spin 1s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+
+.beer-type-text {
+	font-size: 20px;
+	line-height: 24px;
+	padding: 10px 0;
+	margin-bottom: 0;
+	color: #eee;
+}
+@media screen and (max-width: 480px) {
+  	.beer-type-text {
+  		font-size: 18px;
+  		line-height: 20px;
+    }
+}
+
+.bottle-type {
+	width: 100px;
+	height: 210px;
+}
+@media screen and (max-width: 480px) {
+  	.bottle-type {
+  		height: 120px;
+    }
+}
+@media screen and (max-width: 480px) {
+  	.bottle-type.alt {
+  		height: 110px !important;
+    }
+}
+.bottle-type.alt {
+	height: 190px;
+	width: 80px;
+}
+.bottle-container {
+	height: 220px;
+	cursor: pointer;
+}
+@media screen and (max-width: 480px) {
+  	.bottle-container {
+  		height: 120px;
+    }
+}
+.bottle-container:hover .bottle-type {
+	transform: scale(1.05);
+	transition: all .2s ease-in-out;
+}
+.bottle-container:hover .beer-type-text {
+	color: #666;
+}
+.bottle {
+	cursor: pointer;
+}
+#beerChoice input[type=radio]:checked + label .bottle {
+	fill: rgb(165, 112, 42);
+}
+.arrowPrevious {
+	float: right;
+	font-size: 28px;
+	cursor: pointer;
+	text-align: center;
+	color: #888;
+}
+@media screen and (max-width: 480px) {
+  	.arrowPrevious {
+  		font-size: 20px;
+    }
+}
+.arrowPrevious:hover {
+	color: #444;
+}
+.arrowPrevious .previous {
+	font-family: 'bebasregular', 'arial', san-serif;
+	font-size: 18px;
+	line-height: 21px;
+}
+@media screen and (max-width: 480px) {
+  	.arrowPrevious .previous {
+  		font-size: 14px;
+    }
+}
+.logo {
+	background: url('images/beerexplorer-logo-white.svg') no-repeat 50%;
+	height: 230px;
+	margin: 40px 0;
+}
+@media screen and (max-width: 480px) {
+  	.logo {
+  		margin: 0;
+    }
+}
+
+#start-container {
+	color: #fff;
+	cursor: pointer;
+}
+#start-container:hover {
+	color: #ddd;
+}
+.popover {
+	border-radius: 0 !important;
+	width: 330px !important;
+	border: 1px solid #444 !important;
+}
+.popover-content {
+	font-family: 'montserratlight', 'arial', san-serif;
+    color: #444;
+    font-size: 12px;
+}
+
+.style-list {
+	cursor: pointer;
+	text-align: center;
+	display: inline-block;
+	width: 180px;
+	background: #eee;
+	padding: 15px 0;
+}
+.style-list:hover {
+	background: #444;
+	color: #fff;
+}
+p.warning {
+	font-family: 'bebasregular', 'arial', san-serif;
+	font-size: 16px;
+	color: red;
+	text-align: center;
+}
+
+ #searchButton {
+ 	position: absolute;
+ 	bottom: 20px;
+ }
+ #searchButton input {
+ 	font-family: 'bebasregular', 'arial', san-serif;
+ 	font-size: 24px;
+	padding: 12px 24px;
+	border: 5px solid #222;
+	letter-spacing: 1px;
+	background: #eee;
+	color: #222;
+ }
+ #searchButton input.hide {
+ 	opacity: 0.3;
+ 	border:  4px solid #666;
+ 	/*display: none;*/
+ }
+ #searchButton input:hover {
+ 	background: #ddd;
+ 	/*background: #ccc;*/
+ }
+
+ /*// search restart button */
+ #searchRestart {
+ 	background: #222;
+ }
+
+ #searchRestart input {
+ 	font-family: 'bebasregular', 'arial', san-serif;
+ 	font-size: 24px;
+	padding: 15px 30px;
+	border: 5px solid #fff;
+	letter-spacing: 1px;
+ 	background: #fdba12;
+	color: #fff;
+ }
+ #footerContent.hide-section {
+ 	display: none;
+ }
+ #searchRestart input:hover {
+ 	color: #ddd;
+ 	border: 5px solid #ddd;
+ }
+
+ /* results styles */
+.results-title {
+	/*font-family: 'montserratlight', 'arial', san-serif;*/
+	font-family: 'bebasregular', 'arial', san-serif;
+	letter-spacing: 1px;
+	font-size: 30px;
+	margin-top: 20px;
+}
+.results-subtitle {
+	font-family: 'montserratlight', 'arial', san-serif;
+	margin: 12px 0 15px 0;
+	line-height: 18px;
+}
+
+.results-image {
+	text-align: center;
+}
+.results-container {
+	background: #ccc;
+	margin-bottom: 20px;
+}
+
+.results-text-container {
+	padding-top: 5px;
+	padding-bottom: 15px;
+}
+.results-image-container {
+	background: #fff;
+	border: 5px solid #ccc;
+	text-align: center;
+}
+.results-image-container img {
+	max-width: 200px;
+}
+.results-image-container .no-image {
+	background: url('images/default-beer.jpg') no-repeat 50%;
+	background-size: 90%;
+	width: 100%;
+	min-height: 250px;
+}
+
+#footerContent {
+	position: relative;
+	background: #222;
+}
+#footerContent p {
+	font-size: 11px;
+}

